@@ -1,6 +1,7 @@
 // Run the kiosk UI tests on this PC and publish the results to GitHub.
 //
 //   npm run publish-results -- "Add KUI-05 seat type test"
+//   npm run publish-results -- --last-run "Results of this morning's run"   (publish the last run, no new test run)
 //
 // 1. Commits any code/test changes (everything except reports/) with the given message.
 // 2. Runs all tests. Test failures do not stop publishing; they are reported.
@@ -15,7 +16,10 @@ const { execSync, spawnSync } = require('child_process');
 // Project folder, output folder and the commit message given on the command line.
 const root = path.join(__dirname, '..');
 const reportDir = path.join(root, 'reports');
-const message = process.argv.slice(2).join(' ').trim();
+const args = process.argv.slice(2);
+// --last-run: publish test-results/ from the last run instead of running the tests again (the paying tests cost money).
+const lastRun = args.includes('--last-run');
+const message = args.filter((a) => a !== '--last-run').join(' ').trim();
 
 // Optional trailer lines (e.g. "Co-Authored-By: ...") appended to both commits.
 const trailer = process.env.COMMIT_TRAILER ? `\n\n${process.env.COMMIT_TRAILER}` : '';
@@ -44,8 +48,13 @@ if (sh('git diff --cached --name-only')) {
 }
 
 // Step 2: run all tests; keep going even if some fail. The kiosk opens full screen while they run.
-step('Running kiosk UI tests (the kiosk app will open full screen)');
-const testRun = spawnSync('npx playwright test', { cwd: root, stdio: 'inherit', shell: true });
+let testRun = { status: 0 };
+if (lastRun) {
+  step('Using the results of the last test run (--last-run)');
+} else {
+  step('Running kiosk UI tests (the kiosk app will open full screen)');
+  testRun = spawnSync('npx playwright test', { cwd: root, stdio: 'inherit', shell: true });
+}
 if (!fs.existsSync(path.join(root, 'test-results', 'results.json'))) {
   console.error('No results.json produced. Aborting publish.');
   process.exit(1);
@@ -71,10 +80,17 @@ const total = (s.expected || 0) + (s.unexpected || 0) + (s.skipped || 0) + (s.fl
 const summary = `${s.expected || 0}/${total} passed${s.unexpected ? `, ${s.unexpected} failed` : ''}`;
 sh('git add reports');
 commit(`Test results: ${summary}` + trailer);
+// Without a GitHub remote yet, keep the commits local; the first push publishes them.
+let remote = '';
+try {
+  remote = sh('git remote get-url origin');
+} catch {
+  console.log(`\n✔ Committed locally: ${summary}. No GitHub remote ("origin") yet: add one and push to publish.`);
+  process.exit(0);
+}
 execSync('git push -q origin HEAD:main', { cwd: root, stdio: 'inherit' });
 
 // Step 5: print where to see the results.
-const remote = sh('git remote get-url origin');
 const slug = (remote.match(/github\.com[/:]([^/]+\/[^/.]+)/) || [])[1];
 console.log(`\n✔ Published: ${summary}`);
 if (slug) {

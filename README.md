@@ -65,6 +65,7 @@ npx playwright test kui-05      # run one test
 npm run report                  # open the Playwright HTML report (steps, screenshots, video, API calls)
 npm run dashboard               # build dashboard/index.html from the last run
 npm run publish-results -- "message"   # commit, run the tests, build reports/ and push (see below)
+npm run publish-results -- --last-run "message"   # same, but publish the last run instead of paying for a new one
 ```
 
 A running kiosk app is closed before each test, and the kiosk is closed again afterwards. If a test stops
