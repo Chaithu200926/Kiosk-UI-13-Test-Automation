@@ -1,0 +1,63 @@
+# KIOSK UI Testing: publishes the CinescapeKiosk UI test results.
+#
+# How results get here: `npm run publish-results` runs the tests on the QA PC (the kiosk app and the
+# UAT API are only available there, and UI tests need an unlocked Windows desktop) and pushes the
+# results into reports/. That push starts this workflow, which publishes the dashboard to GitHub
+# Pages, shows the results table on the run page, and turns the run red if any test failed.
+name: KIOSK UI Testing
+
+on:
+  # Start when new test results are pushed to main.
+  push:
+    branches: [main]
+    paths: ['reports/**']
+  # Allow republishing by hand from the Actions tab.
+  workflow_dispatch:
+
+# Permissions needed to publish to GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two publishes at once; queue them instead.
+concurrency:
+  group: kiosk-ui-testing
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish dashboard and results
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      # Get the committed reports/ folder.
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      # Put the results table on this run page.
+      - name: Show test results on this run
+        run: cat reports/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      # Package reports/ as the website content.
+      - name: Upload dashboard to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: reports
+
+      # Publish the website.
+      - name: Deploy dashboard to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      # Mark this run red when any test failed, so failures are visible in the Actions list.
+      - name: Fail the run if any test failed
+        run: |
+          failed=$(jq '.stats.unexpected // 0' reports/results.json)
+          echo "Failed tests: $failed"
+          if [ "$failed" -gt 0 ]; then
+            echo "::error::$failed test(s) failed. See the dashboard or the summary above."
+            exit 1
+          fi

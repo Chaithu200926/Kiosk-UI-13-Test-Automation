@@ -1,0 +1,14 @@
+# Files and folders git must NOT upload.
+
+# Installed npm packages (recreated with `npm ci`).
+node_modules/
+# Raw Playwright output from the last run (screenshots, videos, recorded API calls).
+test-results/
+# Playwright HTML report of the last local run.
+playwright-report/
+# Dashboard built by local runs (`npm run dashboard`); published results live in reports/ instead.
+dashboard/
+# Screens saved by the kiosk inspector (scripts/inspect.mjs).
+inspect/
+# Secrets: test account, admin PIN. Never commit this file.
+.env

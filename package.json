@@ -1,0 +1,38 @@
+{
+  "//": {
+    "about": "Project file: name, the npm commands below, and the packages the tests need. JSON has no comments, so they live under this \"//\" key, which npm ignores.",
+    "scripts.test": "Run all kiosk UI tests (starts Appium, the API recorder and the kiosk app automatically).",
+    "scripts.report": "Open the Playwright HTML report of the last run (steps, screenshots, videos).",
+    "scripts.appium": "Start Appium + the API recorder by hand, for exploring screens with npm run inspect.",
+    "scripts.inspect": "Kiosk inspector: list a screen's controls, tap them, save screenshots (see scripts/inspect.mjs).",
+    "scripts.typecheck": "Check the TypeScript code for errors.",
+    "devDependencies": "@playwright/test = runner/report; webdriverio + appium + appium-novawindows-driver = drive the Windows kiosk app; pngjs = crop screenshots and read seat colours; dotenv = loads .env; tsx = runs the TypeScript helper scripts; typescript/@types/node = type checking.",
+    "scripts.dashboard": "Build the HTML dashboard from the last test run into dashboard/.",
+    "scripts.publish-results": "Commit changes, run all tests, build the dashboard into reports/ and push to GitHub."
+  },
+  "name": "cinescapekiosk-ui-automation",
+  "version": "1.0.0",
+  "description": "Appium UI automation for the CinescapeKiosk Windows app, reported with Playwright",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "dashboard": "node scripts/generate-dashboard.js",
+    "publish-results": "node scripts/publish.js",
+    "report": "playwright show-report",
+    "appium": "tsx scripts/appium-server.ts",
+    "inspect": "node scripts/inspect.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "@types/pngjs": "^6.0.5",
+    "appium": "^3.8.0",
+    "appium-novawindows-driver": "^1.4.5",
+    "dotenv": "^18.0.4",
+    "pngjs": "^7.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "webdriverio": "^9.32.0"
+  }
+}
