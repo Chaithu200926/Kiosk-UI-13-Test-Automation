@@ -63,168 +63,772 @@ footer { color:var(--muted); font-size:13px; margin-top:24px; }
 </head>
 <body><main>
 <h1>Cinescape kiosk UI tests</h1>
-<p class="muted">Run local · 2026-09-30 06:47:29 UTC · <a href="https://github.com/Chaithu200926/Kiosk-UI-13-Test-Automation">Repository</a> · <a href="https://github.com/Chaithu200926/Kiosk-UI-13-Test-Automation/actions">Actions</a></p>
+<p class="muted">Run local · 2026-09-30 06:12:58 UTC</p>
 
 <section class="tiles">
-  <div class="tile"><b>11</b><span>Tests</span></div>
-  <div class="tile"><b>0</b><span>✓ Passed</span></div>
-  <div class="tile"><b>0</b><span>✗ Failed</span></div>
-  <div class="tile"><b>11</b><span>– Skipped</span></div>
-  <div class="tile"><b>0%</b><span>Pass rate</span></div>
-  <div class="tile"><b>0</b><span>Steps executed</span></div>
-  <div class="tile"><b>0.07s</b><span>Duration</span></div>
+  <div class="tile"><b>17</b><span>Tests</span></div>
+  <div class="tile"><b>15</b><span>✓ Passed</span></div>
+  <div class="tile"><b>1</b><span>✗ Failed</span></div>
+  <div class="tile"><b>1</b><span>– Skipped</span></div>
+  <div class="tile"><b>88%</b><span>Pass rate</span></div>
+  <div class="tile"><b>134</b><span>Steps executed</span></div>
+  <div class="tile"><b>1464.00s</b><span>Duration</span></div>
 </section>
 
 <section class="two">
-  <div class="panel"><h2 style="margin-top:0">Trend: last 2 runs</h2><div class="chart" role="img" aria-label="Test results for the last 2 runs">
+  <div class="panel"><h2 style="margin-top:0">Trend: last 1 run</h2><div class="chart" role="img" aria-label="Test results for the last 1 runs">
     <div class="yaxis"><span>17</span><span>9</span><span>0</span></div>
     <div class="plot"><div class="grid"></div><div class="col" tabindex="0" data-tip="Run local · 2026-09-30 06:12&#10;15 passed · 1 failed · 1 skipped&#10;Pass rate 88% · abf4569">
         <div class="stack"><i class="seg skip" style="height:5.88235294117647%"></i><i class="seg fail" style="height:5.88235294117647%"></i><i class="seg pass" style="height:88.23529411764706%"></i></div>
-        <span class="xl">local</span></div><div class="col" tabindex="0" data-tip="Run local · 2026-09-30 06:47&#10;0 passed · 0 failed · 11 skipped&#10;Pass rate 0% · 9596b6f">
-        <div class="stack"><i class="seg skip" style="height:64.70588235294117%"></i></div>
         <span class="xl">local</span></div></div>
   </div>
   <div class="legend"><span><i class="sw pass"></i>Passed</span><span><i class="sw fail"></i>Failed</span><span><i class="sw skip"></i>Skipped</span><span class="muted">Hover a column for details · x-axis: run number</span></div></div>
-  <div class="panel"><h2 style="margin-top:0">Run &amp; environment</h2><table class="kv"><tr><th>Run</th><td>local</td></tr><tr><th>Commit</th><td><a href="https://github.com/Chaithu200926/Kiosk-UI-13-Test-Automation/commit/9596b6f703be51b255c68e70bd855406928c0528">9596b6f</a> message</td></tr><tr><th>Pushed by</th><td>Chaithu200926</td></tr><tr><th>Branch</th><td>main</td></tr><tr><th>Trigger</th><td>published from QA PC</td></tr><tr><th>Started</th><td>2026-09-30 06:47:29 UTC</td></tr><tr><th>Finished</th><td>2026-09-30 06:47:29 UTC</td></tr><tr><th>Machine</th><td>QA PC (Windows desktop)</td></tr><tr><th>OS</th><td>Windows_NT 10.0.26200</td></tr><tr><th>Node.js / Playwright</th><td>v24.21.0 / 1.63.0</td></tr><tr><th>Driver</th><td>CinescapeKiosk (Appium NovaWindows)</td></tr><tr><th>App under test</th><td>CinescapeKiosk build CinescapeKioskNew13 · UAT API</td></tr></table></div>
+  <div class="panel"><h2 style="margin-top:0">Run &amp; environment</h2><table class="kv"><tr><th>Run</th><td>local</td></tr><tr><th>Commit</th><td>abf4569 Publish results of the last run without re-running; commit locally until a GitHub remote exists</td></tr><tr><th>Pushed by</th><td>Chaithu200926</td></tr><tr><th>Branch</th><td>main</td></tr><tr><th>Trigger</th><td>published from QA PC</td></tr><tr><th>Started</th><td>2026-09-30 06:12:58 UTC</td></tr><tr><th>Finished</th><td>2026-09-30 06:37:22 UTC</td></tr><tr><th>Machine</th><td>QA PC (Windows desktop)</td></tr><tr><th>OS</th><td>Windows_NT 10.0.26200</td></tr><tr><th>Node.js / Playwright</th><td>v24.21.0 / 1.63.0</td></tr><tr><th>Driver</th><td>CinescapeKiosk (Appium NovaWindows)</td></tr><tr><th>App under test</th><td>CinescapeKiosk build CinescapeKioskNew13 · UAT API</td></tr></table></div>
 </section>
 
 <h2>Overview</h2>
-<div class="panel scroll"><table class="list"><thead><tr><th>Test</th><th>Result</th><th>Duration</th><th>Steps</th><th>Failure</th><th>Last 10 runs</th></tr></thead><tbody><tr><td><a href="#test-1">KUI-01 App start: the home screen loads with all menu buttons</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-2">KUI-02 Language switch: Arabic translates and mirrors the screens, HOME returns to English</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-3">KUI-03 Films and show times match today&#39;s programme</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-4">KUI-04 Coming soon: films show opening dates and details, not on sale yet</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-5">KUI-05 Seat type and ticket quantity: total = price x quantity</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-6">KUI-06 Seat selection: unavailable seats are blocked and Proceed needs every seat</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-7">KUI-09 Food combo options carry through to checkout</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-8">KUI-14 Cancel during booking releases the reserved seats</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-9">KUI-15 Idle timeout: the kiosk returns home and releases held seats</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-10">KUI-21 Printer out of paper: clear message, nothing printed</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip skip" title="Run local · 2026-09-30 06:12 · Skipped">–</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr><tr><td><a href="#test-11">KUI-23 API unavailable: friendly messages, no crash, recovers when the API is back</a></td><td><span class="pill skip">– Skipped</span></td>
-      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span></td></tr></tbody></table></div>
+<div class="panel scroll"><table class="list"><thead><tr><th>Test</th><th>Result</th><th>Duration</th><th>Steps</th><th>Failure</th><th>Last 10 runs</th></tr></thead><tbody><tr><td><a href="#test-1">KUI-01 App start: the home screen loads with all menu buttons</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>17.32s</td><td>5</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-2">KUI-02 Language switch: Arabic translates and mirrors the screens, HOME returns to English</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>27.47s</td><td>6</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-3">KUI-03 Films and show times match today&#39;s programme</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>26.41s</td><td>5</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-4">KUI-04 Coming soon: films show opening dates and details, not on sale yet</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>19.70s</td><td>4</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-5">KUI-05 Seat type and ticket quantity: total = price x quantity</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>29.88s</td><td>10</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-6">KUI-06 Seat selection: unavailable seats are blocked and Proceed needs every seat</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>125.84s</td><td>10</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-7">KUI-07 Ticket purchase end to end, paid by club card</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>142.59s</td><td>13</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-8">KUI-16 Pickup tickets by BOOKING ID; a second pickup is refused</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>68.98s</td><td>3</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-9">KUI-08 Food purchase end to end, paid by club card</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>116.42s</td><td>8</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-10">KUI-09 Food combo options carry through to checkout</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>91.02s</td><td>10</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-11">KUI-10 Tickets and food in one order, paid once by club card</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>207.34s</td><td>14</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-12">KUI-11 Club card (wallet) payment deducts the balance</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>97.35s</td><td>8</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-13">KUI-14 Cancel during booking releases the reserved seats</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>75.76s</td><td>8</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-14">KUI-15 Idle timeout: the kiosk returns home and releases held seats</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>145.94s</td><td>9</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr><tr><td><a href="#test-15">KUI-17 Email my tickets after a purchase</a></td><td><span class="pill fail">✗ Failed</span></td>
+      <td>230.32s</td><td>15</td><td>Error: history/resend answered &quot;Something went wrong!&quot;, so the kiosk shows &quot;The email could not be sent. Your paper tickets are all you need.&quot;</td><td><span class="chips" aria-label="Last 1 runs"><span class="chip fail" title="Run local · 2026-09-30 06:12 · Failed">✗</span></span></td></tr><tr><td><a href="#test-16">KUI-21 Printer out of paper: clear message, nothing printed</a></td><td><span class="pill skip">– Skipped</span></td>
+      <td>0.00s</td><td>0</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip skip" title="Run local · 2026-09-30 06:12 · Skipped">–</span></span></td></tr><tr><td><a href="#test-17">KUI-23 API unavailable: friendly messages, no crash, recovers when the API is back</a></td><td><span class="pill pass">✓ Passed</span></td>
+      <td>37.19s</td><td>6</td><td></td><td><span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span></td></tr></tbody></table></div>
 
 <h2>Test details</h2>
-<article class="test skip" id="test-1">
+<article class="test pass" id="test-1">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-01 App start: the home screen loads with all menu buttons</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">17.32s</span>
   </header>
-  <p class="file">kui-01-home-screen.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-01-home-screen.spec.ts · Kiosk app · 5 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-1-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>5 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Kiosk started and the home screen is shown</span><span class="muted">0.21s</span></div>
+        
+        <a href="assets/test-1-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-1-snapshot-1.png" alt="Screenshot: 01 Kiosk started and the home screen is shown"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Header shows the clock, date and cinema name</span><span class="muted">0.28s</span></div>
+        
+        <a href="assets/test-1-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-1-snapshot-2.png" alt="Screenshot: 02 Header shows the clock, date and cinema name"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Main menu buttons are all present</span><span class="muted">7.34s</span></div>
+        
+        <a href="assets/test-1-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-1-snapshot-3.png" alt="Screenshot: 03 Main menu buttons are all present"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Promo banner and UPCOMING SHOWS are shown</span><span class="muted">0.80s</span></div>
+        
+        <a href="assets/test-1-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-1-snapshot-4.png" alt="Screenshot: 04 Promo banner and UPCOMING SHOWS are shown"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk loaded today&#39;s programme from the API</span><span class="muted">0.20s</span></div>
+        
+        <a href="assets/test-1-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-1-snapshot-5.png" alt="Screenshot: 05 The kiosk loaded today&#39;s programme from the API"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-2">
+<article class="test pass" id="test-2">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-02 Language switch: Arabic translates and mirrors the screens, HOME returns to English</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">27.47s</span>
   </header>
-  <p class="file">kui-02-language-switch.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-02-language-switch.spec.ts · Kiosk app · 6 steps</p>
+  <ul class="notes"><li><b>finding:</b> Still in English in Arabic mode: cinema name &quot;Cinescape 360&quot;; experience names (Standard / VIP / 4DX)</li></ul>
   
-  
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-2-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>6 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">English home screen: NOW SHOWING is on the left</span><span class="muted">0.40s</span></div>
+        
+        <a href="assets/test-2-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-2-snapshot-1.png" alt="Screenshot: 01 English home screen: NOW SHOWING is on the left"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Tap عربي: the home menu is in Arabic</span><span class="muted">9.07s</span></div>
+        
+        <a href="assets/test-2-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-2-snapshot-2.png" alt="Screenshot: 02 Tap عربي: the home menu is in Arabic"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Layout is right-to-left: NOW SHOWING moved to the right, Arabic day name in the date</span><span class="muted">0.38s</span></div>
+        
+        <a href="assets/test-2-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-2-snapshot-3.png" alt="Screenshot: 03 Layout is right-to-left: NOW SHOWING moved to the right, Arabic day name in the date"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Known gaps in Arabic mode are recorded (cinema name, experience names, promo banner)</span><span class="muted">0.71s</span></div>
+        
+        <a href="assets/test-2-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-2-snapshot-4.png" alt="Screenshot: 04 Known gaps in Arabic mode are recorded (cinema name, experience names, promo banner)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">NOW SHOWING in Arabic shows Arabic film titles</span><span class="muted">3.90s</span></div>
+        
+        <a href="assets/test-2-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-2-snapshot-5.png" alt="Screenshot: 05 NOW SHOWING in Arabic shows Arabic film titles"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">HOME returns to the English home screen</span><span class="muted">4.72s</span></div>
+        
+        <a href="assets/test-2-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-2-snapshot-6.png" alt="Screenshot: 06 HOME returns to the English home screen"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-3">
+<article class="test pass" id="test-3">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-03 Films and show times match today&#39;s programme</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">26.41s</span>
   </header>
-  <p class="file">kui-03-films-and-showtimes.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-03-films-and-showtimes.spec.ts · Kiosk app · 5 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-3-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>5 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">2.90s</span></div>
+        
+        <a href="assets/test-3-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-3-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Every film tile on screen is in today&#39;s programme</span><span class="muted">1.87s</span></div>
+        
+        <a href="assets/test-3-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-3-snapshot-2.png" alt="Screenshot: 02 Every film tile on screen is in today&#39;s programme"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open &quot;The Buckingham Murders - Hindi&quot; and check its details</span><span class="muted">4.31s</span></div>
+        
+        <a href="assets/test-3-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-3-snapshot-3.png" alt="Screenshot: 03 Open &quot;The Buckingham Murders - Hindi&quot; and check its details"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Show times on screen match the programme (today only, no date picker)</span><span class="muted">0.45s</span></div>
+        
+        <a href="assets/test-3-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-3-snapshot-4.png" alt="Screenshot: 04 Show times on screen match the programme (today only, no date picker)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">MOVIES returns to the film list</span><span class="muted">4.20s</span></div>
+        
+        <a href="assets/test-3-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-3-snapshot-5.png" alt="Screenshot: 05 MOVIES returns to the film list"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-4">
+<article class="test pass" id="test-4">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-04 Coming soon: films show opening dates and details, not on sale yet</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">19.70s</span>
   </header>
-  <p class="file">kui-04-coming-soon.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-04-coming-soon.spec.ts · Kiosk app · 4 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-4-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>4 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open COMING SOON: films are listed with an opening date</span><span class="muted">3.83s</span></div>
+        
+        <a href="assets/test-4-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-4-snapshot-1.png" alt="Screenshot: 01 Open COMING SOON: films are listed with an opening date"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk loaded the list from content/comingsoon</span><span class="muted">0.21s</span></div>
+        
+        <a href="assets/test-4-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-4-snapshot-2.png" alt="Screenshot: 02 The kiosk loaded the list from content/comingsoon"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open &quot;Smile 3&quot;: details and &quot;Tickets are not on sale yet.&quot;</span><span class="muted">2.88s</span></div>
+        
+        <a href="assets/test-4-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-4-snapshot-3.png" alt="Screenshot: 03 Open &quot;Smile 3&quot;: details and &quot;Tickets are not on sale yet.&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Close the details, then HOME</span><span class="muted">4.94s</span></div>
+        
+        <a href="assets/test-4-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-4-snapshot-4.png" alt="Screenshot: 04 Close the details, then HOME"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-5">
+<article class="test pass" id="test-5">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-05 Seat type and ticket quantity: total = price x quantity</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">29.88s</span>
   </header>
-  <p class="file">kui-05-seat-type-and-quantity.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-05-seat-type-and-quantity.spec.ts · Kiosk app · 10 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-5-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>10 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.58s</span></div>
+        
+        <a href="assets/test-5-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.48s</span></div>
+        
+        <a href="assets/test-5-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.15s</span></div>
+        
+        <a href="assets/test-5-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Seat areas are listed with free seats and a KWD price</span><span class="muted">0.48s</span></div>
+        
+        <a href="assets/test-5-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-4.png" alt="Screenshot: 04 Seat areas are listed with free seats and a KWD price"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General: total = 1 x KWD 3.500</span><span class="muted">1.90s</span></div>
+        
+        <a href="assets/test-5-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-5.png" alt="Screenshot: 05 Choose General: total = 1 x KWD 3.500"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Quantity 2: total = 2 x KWD 3.500</span><span class="muted">1.52s</span></div>
+        
+        <a href="assets/test-5-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-6.png" alt="Screenshot: 06 Quantity 2: total = 2 x KWD 3.500"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Quantity 3: total = 3 x KWD 3.500</span><span class="muted">1.53s</span></div>
+        
+        <a href="assets/test-5-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-7.png" alt="Screenshot: 07 Quantity 3: total = 3 x KWD 3.500"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Quantity back to 2 with −: total = 2 x KWD 3.500</span><span class="muted">1.51s</span></div>
+        
+        <a href="assets/test-5-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-8.png" alt="Screenshot: 08 Quantity back to 2 with −: total = 2 x KWD 3.500"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Terms: &quot;By clicking proceed, I agree to the terms &amp; conditions&quot; is shown</span><span class="muted">0.58s</span></div>
+        
+        <a href="assets/test-5-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-9.png" alt="Screenshot: 09 Terms: &quot;By clicking proceed, I agree to the terms &amp; conditions&quot; is shown"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Cancel leaves the booking and returns to the film</span><span class="muted">2.29s</span></div>
+        
+        <a href="assets/test-5-snapshot-10.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-5-snapshot-10.png" alt="Screenshot: 10 Cancel leaves the booking and returns to the film"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-6">
+<article class="test pass" id="test-6">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-06 Seat selection: unavailable seats are blocked and Proceed needs every seat</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">125.84s</span>
   </header>
-  <p class="file">kui-06-seat-selection-rules.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-06-seat-selection-rules.spec.ts · Kiosk app · 10 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-6-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>10 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.60s</span></div>
+        
+        <a href="assets/test-6-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.57s</span></div>
+        
+        <a href="assets/test-6-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.16s</span></div>
+        
+        <a href="assets/test-6-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 2 ticket(s), then proceed to the seat map</span><span class="muted">6.76s</span></div>
+        
+        <a href="assets/test-6-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-4.png" alt="Screenshot: 04 Choose General and 2 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Seat map shows the screen, the legend and free seats</span><span class="muted">14.14s</span></div>
+        
+        <a href="assets/test-6-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-5.png" alt="Screenshot: 05 Seat map shows the screen, the legend and free seats"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">An unavailable seat cannot be selected</span><span class="muted">11.58s</span></div>
+        
+        <a href="assets/test-6-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-6.png" alt="Screenshot: 06 An unavailable seat cannot be selected"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose two neighbouring free seats</span><span class="muted">26.84s</span></div>
+        
+        <a href="assets/test-6-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-7.png" alt="Screenshot: 07 Choose two neighbouring free seats"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Both seats (D12, D11) are selected and Proceed is enabled</span><span class="muted">7.60s</span></div>
+        
+        <a href="assets/test-6-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-8.png" alt="Screenshot: 08 Both seats (D12, D11) are selected and Proceed is enabled"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Tap D11 again: it is released and Proceed is disabled</span><span class="muted">11.24s</span></div>
+        
+        <a href="assets/test-6-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-9.png" alt="Screenshot: 09 Tap D11 again: it is released and Proceed is disabled"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Reset clears the selection</span><span class="muted">7.58s</span></div>
+        
+        <a href="assets/test-6-snapshot-10.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-6-snapshot-10.png" alt="Screenshot: 10 Reset clears the selection"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-7">
+<article class="test pass" id="test-7">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
+    <h3>KUI-07 Ticket purchase end to end, paid by club card</h3>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">142.59s</span>
+  </header>
+  <p class="file">kui-07-16-ticket-purchase-and-pickup.spec.ts · Kiosk app · 13 steps</p>
+  <ul class="notes"><li><b>paid booking:</b> BOOKING ID WXQXPLM (booking 2003479), KWD 3.500 paid by club card. Not cancelled: kiosk bookings cannot be cancelled online.</li><li><b>timing:</b> Back on the home screen 33 s after the success screen was read.</li></ul>
+  
+  <details><summary>Watch test video (part 1 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-7-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details><details><summary>Watch test video (part 2 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-7-video-2.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>13 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.59s</span></div>
+        
+        <a href="assets/test-7-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.44s</span></div>
+        
+        <a href="assets/test-7-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.15s</span></div>
+        
+        <a href="assets/test-7-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 1 ticket(s), then proceed to the seat map</span><span class="muted">5.84s</span></div>
+        
+        <a href="assets/test-7-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-4.png" alt="Screenshot: 04 Choose General and 1 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose a free seat and proceed</span><span class="muted">18.90s</span></div>
+        
+        <a href="assets/test-7-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-5.png" alt="Screenshot: 05 Choose a free seat and proceed"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">SKIP food: &quot;Preview and Checkout&quot; shows the film, show, seat and total</span><span class="muted">4.72s</span></div>
+        
+        <a href="assets/test-7-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-6.png" alt="Screenshot: 06 SKIP food: &quot;Preview and Checkout&quot; shows the film, show, seat and total"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the mobile number and proceed to payment</span><span class="muted">14.48s</span></div>
+        
+        <a href="assets/test-7-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-7.png" alt="Screenshot: 07 Enter the mobile number and proceed to payment"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose CLUB CARD</span><span class="muted">8.75s</span></div>
+        
+        <a href="assets/test-7-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-8.png" alt="Screenshot: 08 Choose CLUB CARD"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the club card number and PAY</span><span class="muted">16.18s</span></div>
+        
+        <a href="assets/test-7-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-9.png" alt="Screenshot: 09 Enter the club card number and PAY"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)</span><span class="muted">2.13s</span></div>
+        
+        <a href="assets/test-7-snapshot-10.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-10.png" alt="Screenshot: 10 The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Booking Success!&quot; shows the BOOKING ID, show, seat and amount paid</span><span class="muted">2.50s</span></div>
+        
+        <a href="assets/test-7-snapshot-11.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-11.png" alt="Screenshot: 11 &quot;Booking Success!&quot; shows the BOOKING ID, show, seat and amount paid"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The ticket is printed: &quot;Please collect your tickets.&quot; and EMAIL MY TICKETS is offered</span><span class="muted">2.41s</span></div>
+        
+        <a href="assets/test-7-snapshot-12.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-12.png" alt="Screenshot: 12 The ticket is printed: &quot;Please collect your tickets.&quot; and EMAIL MY TICKETS is offered"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk returns to the home screen by itself</span><span class="muted">40.69s</span></div>
+        
+        <a href="assets/test-7-snapshot-13.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-7-snapshot-13.png" alt="Screenshot: 13 The kiosk returns to the home screen by itself"></a>
+      </li></ol></details>
+</article>
+<article class="test pass" id="test-8">
+  <header>
+    <span class="pill pass">✓ Passed</span>
+    <h3>KUI-16 Pickup tickets by BOOKING ID; a second pickup is refused</h3>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">68.98s</span>
+  </header>
+  <p class="file">kui-07-16-ticket-purchase-and-pickup.spec.ts · Kiosk app · 3 steps</p>
+  <ul class="notes"><li><b>possible defect:</b> Tickets printed at purchase are not marked as collected, so the first pickup prints them again.</li></ul>
+  
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-8-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>3 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Unknown BOOKING ID: &quot;Booking not found&quot;, the kiosk stays on the pickup screen</span><span class="muted">17.62s</span></div>
+        
+        <a href="assets/test-8-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-8-snapshot-1.png" alt="Screenshot: 01 Unknown BOOKING ID: &quot;Booking not found&quot;, the kiosk stays on the pickup screen"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Pick up WXQXPLM: the booking is found and the tickets are printed</span><span class="muted">17.46s</span></div>
+        
+        <a href="assets/test-8-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-8-snapshot-2.png" alt="Screenshot: 02 Pick up WXQXPLM: the booking is found and the tickets are printed"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Second pickup of the same BOOKING ID is refused (tickets already collected)</span><span class="muted">22.07s</span></div>
+        
+        <a href="assets/test-8-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-8-snapshot-3.png" alt="Screenshot: 03 Second pickup of the same BOOKING ID is refused (tickets already collected)"></a>
+      </li></ol></details>
+</article>
+<article class="test pass" id="test-9">
+  <header>
+    <span class="pill pass">✓ Passed</span>
+    <h3>KUI-08 Food purchase end to end, paid by club card</h3>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">116.42s</span>
+  </header>
+  <p class="file">kui-08-food-purchase.spec.ts · Kiosk app · 8 steps</p>
+  <ul class="notes"><li><b>paid booking:</b> BOOKING ID WS7S83R (booking 2003480), KWD 0.500 paid by club card. Not cancelled: kiosk bookings cannot be cancelled online.</li><li><b>timing:</b> Back on the home screen 37 s after the success screen was read.</li></ul>
+  
+  <details><summary>Watch test video (part 1 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-9-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details><details><summary>Watch test video (part 2 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-9-video-2.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>8 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">FOOD: add &quot;Aquafina Water UAT&quot; and check the total</span><span class="muted">10.44s</span></div>
+        
+        <a href="assets/test-9-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-1.png" alt="Screenshot: 01 FOOD: add &quot;Aquafina Water UAT&quot; and check the total"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Preview and Checkout&quot; lists the item, the total and when it is prepared</span><span class="muted">4.54s</span></div>
+        
+        <a href="assets/test-9-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-2.png" alt="Screenshot: 02 &quot;Preview and Checkout&quot; lists the item, the total and when it is prepared"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the mobile number and proceed to payment</span><span class="muted">13.53s</span></div>
+        
+        <a href="assets/test-9-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-3.png" alt="Screenshot: 03 Enter the mobile number and proceed to payment"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose CLUB CARD</span><span class="muted">8.02s</span></div>
+        
+        <a href="assets/test-9-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-4.png" alt="Screenshot: 04 Choose CLUB CARD"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the club card number and PAY</span><span class="muted">15.21s</span></div>
+        
+        <a href="assets/test-9-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-5.png" alt="Screenshot: 05 Enter the club card number and PAY"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)</span><span class="muted">1.71s</span></div>
+        
+        <a href="assets/test-9-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-6.png" alt="Screenshot: 06 The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Booking Success!&quot; shows the food pickup number, the item, the BOOKING ID and the amount</span><span class="muted">2.26s</span></div>
+        
+        <a href="assets/test-9-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-7.png" alt="Screenshot: 07 &quot;Booking Success!&quot; shows the food pickup number, the item, the BOOKING ID and the amount"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk returns to the home screen by itself</span><span class="muted">44.09s</span></div>
+        
+        <a href="assets/test-9-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-9-snapshot-8.png" alt="Screenshot: 08 The kiosk returns to the home screen by itself"></a>
+      </li></ol></details>
+</article>
+<article class="test pass" id="test-10">
+  <header>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-09 Food combo options carry through to checkout</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">91.02s</span>
   </header>
-  <p class="file">kui-09-food-combo-options.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-09-food-combo-options.spec.ts · Kiosk app · 10 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-10-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>10 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.60s</span></div>
+        
+        <a href="assets/test-10-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.66s</span></div>
+        
+        <a href="assets/test-10-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.22s</span></div>
+        
+        <a href="assets/test-10-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 1 ticket(s), then proceed to the seat map</span><span class="muted">5.96s</span></div>
+        
+        <a href="assets/test-10-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-4.png" alt="Screenshot: 04 Choose General and 1 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose a free seat and proceed (the kiosk reserves it)</span><span class="muted">19.77s</span></div>
+        
+        <a href="assets/test-10-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-5.png" alt="Screenshot: 05 Choose a free seat and proceed (the kiosk reserves it)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Food screen shows the menu tabs and the tickets total</span><span class="muted">2.35s</span></div>
+        
+        <a href="assets/test-10-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-6.png" alt="Screenshot: 06 Food screen shows the menu tabs and the tickets total"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Add &quot;Medium Popcorn &amp; Soda COMBO2&quot; and choose its options</span><span class="muted">5.46s</span></div>
+        
+        <a href="assets/test-10-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-7.png" alt="Screenshot: 07 Add &quot;Medium Popcorn &amp; Soda COMBO2&quot; and choose its options"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Done: the cart shows the options and the total rises by the combo price</span><span class="muted">4.11s</span></div>
+        
+        <a href="assets/test-10-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-8.png" alt="Screenshot: 08 Done: the cart shows the options and the total rises by the combo price"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Preview and Checkout lists tickets, food and the grand total</span><span class="muted">4.75s</span></div>
+        
+        <a href="assets/test-10-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-9.png" alt="Screenshot: 09 Preview and Checkout lists tickets, food and the grand total"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Cancel out of checkout: the kiosk cancels the reservation</span><span class="muted">29.71s</span></div>
+        
+        <a href="assets/test-10-snapshot-10.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-10-snapshot-10.png" alt="Screenshot: 10 Cancel out of checkout: the kiosk cancels the reservation"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-8">
+<article class="test pass" id="test-11">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
+    <h3>KUI-10 Tickets and food in one order, paid once by club card</h3>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">207.34s</span>
+  </header>
+  <p class="file">kui-10-tickets-and-food.spec.ts · Kiosk app · 14 steps</p>
+  <ul class="notes"><li><b>paid booking:</b> BOOKING ID WJXSJBF (booking 2003481), KWD 4.000 paid by club card. Not cancelled: kiosk bookings cannot be cancelled online.</li><li><b>timing:</b> Back on the home screen 87 s after the success screen was read.</li></ul>
+  
+  <details><summary>Watch test video (part 1 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-11-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details><details><summary>Watch test video (part 2 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-11-video-2.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>14 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.63s</span></div>
+        
+        <a href="assets/test-11-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.56s</span></div>
+        
+        <a href="assets/test-11-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.24s</span></div>
+        
+        <a href="assets/test-11-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 1 ticket(s), then proceed to the seat map</span><span class="muted">5.94s</span></div>
+        
+        <a href="assets/test-11-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-4.png" alt="Screenshot: 04 Choose General and 1 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose a free seat and proceed to &quot;Select Food&quot;</span><span class="muted">19.35s</span></div>
+        
+        <a href="assets/test-11-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-5.png" alt="Screenshot: 05 Choose a free seat and proceed to &quot;Select Food&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Add &quot;Aquafina Water UAT&quot;: the total rises by its price</span><span class="muted">10.24s</span></div>
+        
+        <a href="assets/test-11-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-6.png" alt="Screenshot: 06 Add &quot;Aquafina Water UAT&quot;: the total rises by its price"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Preview and Checkout&quot;: tickets + food = total</span><span class="muted">4.95s</span></div>
+        
+        <a href="assets/test-11-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-7.png" alt="Screenshot: 07 &quot;Preview and Checkout&quot;: tickets + food = total"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the mobile number and proceed to payment</span><span class="muted">14.85s</span></div>
+        
+        <a href="assets/test-11-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-8.png" alt="Screenshot: 08 Enter the mobile number and proceed to payment"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose CLUB CARD</span><span class="muted">8.84s</span></div>
+        
+        <a href="assets/test-11-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-9.png" alt="Screenshot: 09 Choose CLUB CARD"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the club card number and PAY</span><span class="muted">15.34s</span></div>
+        
+        <a href="assets/test-11-snapshot-10.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-10.png" alt="Screenshot: 10 Enter the club card number and PAY"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)</span><span class="muted">2.24s</span></div>
+        
+        <a href="assets/test-11-snapshot-11.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-11.png" alt="Screenshot: 11 The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Booking Success!&quot; shows both references (BOOKING ID and FOOD PICKUP NO.), the seat and one total</span><span class="muted">2.65s</span></div>
+        
+        <a href="assets/test-11-snapshot-12.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-12.png" alt="Screenshot: 12 &quot;Booking Success!&quot; shows both references (BOOKING ID and FOOD PICKUP NO.), the seat and one total"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">One club card payment and one booking for tickets and food</span><span class="muted">2.35s</span></div>
+        
+        <a href="assets/test-11-snapshot-13.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-13.png" alt="Screenshot: 13 One club card payment and one booking for tickets and food"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk returns to the home screen by itself</span><span class="muted">94.26s</span></div>
+        
+        <a href="assets/test-11-snapshot-14.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-11-snapshot-14.png" alt="Screenshot: 14 The kiosk returns to the home screen by itself"></a>
+      </li></ol></details>
+</article>
+<article class="test pass" id="test-12">
+  <header>
+    <span class="pill pass">✓ Passed</span>
+    <h3>KUI-11 Club card (wallet) payment deducts the balance</h3>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">97.35s</span>
+  </header>
+  <p class="file">kui-11-club-card-payment.spec.ts · Kiosk app · 8 steps</p>
+  <ul class="notes"><li><b>balance before:</b> KWD 188.500</li><li><b>paid booking:</b> BOOKING ID WJ3FS8S (booking 2003482), KWD 0.500 paid by club card. Not cancelled: kiosk bookings cannot be cancelled online.</li><li><b>balance after:</b> KWD 188.000</li></ul>
+  
+  <details><summary>Watch test video (part 1 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-12-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details><details><summary>Watch test video (part 2 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-12-video-2.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>8 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Website: the customer&#39;s club card and its balance before paying</span><span class="muted">18.55s</span></div>
+        
+        
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">FOOD: order &quot;Aquafina Water UAT&quot; and go to checkout</span><span class="muted">11.84s</span></div>
+        
+        <a href="assets/test-12-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-12-snapshot-1.png" alt="Screenshot: 01 FOOD: order &quot;Aquafina Water UAT&quot; and go to checkout"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the mobile number and proceed to payment</span><span class="muted">13.57s</span></div>
+        
+        <a href="assets/test-12-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-12-snapshot-2.png" alt="Screenshot: 02 Enter the mobile number and proceed to payment"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose CLUB CARD</span><span class="muted">7.95s</span></div>
+        
+        <a href="assets/test-12-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-12-snapshot-3.png" alt="Screenshot: 03 Choose CLUB CARD"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the club card number and PAY</span><span class="muted">15.18s</span></div>
+        
+        <a href="assets/test-12-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-12-snapshot-4.png" alt="Screenshot: 04 Enter the club card number and PAY"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)</span><span class="muted">1.72s</span></div>
+        
+        <a href="assets/test-12-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-12-snapshot-5.png" alt="Screenshot: 05 The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Booking Success!&quot; shows the amount paid</span><span class="muted">1.99s</span></div>
+        
+        <a href="assets/test-12-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-12-snapshot-6.png" alt="Screenshot: 06 &quot;Booking Success!&quot; shows the amount paid"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Website: the balance went down by exactly the amount paid</span><span class="muted">13.83s</span></div>
+        
+        
+      </li></ol></details>
+</article>
+<article class="test pass" id="test-13">
+  <header>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-14 Cancel during booking releases the reserved seats</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">75.76s</span>
   </header>
-  <p class="file">kui-14-cancel-releases-seats.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-14-cancel-releases-seats.spec.ts · Kiosk app · 8 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-13-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>8 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.53s</span></div>
+        
+        <a href="assets/test-13-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.46s</span></div>
+        
+        <a href="assets/test-13-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.20s</span></div>
+        
+        <a href="assets/test-13-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 1 ticket(s), then proceed to the seat map</span><span class="muted">5.91s</span></div>
+        
+        <a href="assets/test-13-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-4.png" alt="Screenshot: 04 Choose General and 1 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose a free seat and proceed (the kiosk reserves it)</span><span class="muted">19.19s</span></div>
+        
+        <a href="assets/test-13-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-5.png" alt="Screenshot: 05 Choose a free seat and proceed (the kiosk reserves it)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The backend reserved D10</span><span class="muted">0.21s</span></div>
+        
+        <a href="assets/test-13-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-6.png" alt="Screenshot: 06 The backend reserved D10"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Cancel on the food screen: the kiosk cancels the reservation</span><span class="muted">3.40s</span></div>
+        
+        <a href="assets/test-13-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-7.png" alt="Screenshot: 07 Cancel on the food screen: the kiosk cancels the reservation"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Back on the seat map, D10 is free again</span><span class="muted">4.75s</span></div>
+        
+        <a href="assets/test-13-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-13-snapshot-8.png" alt="Screenshot: 08 Back on the seat map, D10 is free again"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-9">
+<article class="test pass" id="test-14">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-15 Idle timeout: the kiosk returns home and releases held seats</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">145.94s</span>
   </header>
-  <p class="file">kui-15-idle-timeout.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-15-idle-timeout.spec.ts · Kiosk app · 9 steps</p>
+  <ul class="notes"><li><b>idle timeout:</b> Film list → home after about 39 s</li><li><b>idle timeout:</b> Food screen with a held seat → home after about 59 s</li></ul>
   
-  
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-14-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>9 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING, then leave the kiosk untouched</span><span class="muted">2.94s</span></div>
+        
+        <a href="assets/test-14-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING, then leave the kiosk untouched"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk returns to the home screen by itself</span><span class="muted">39.37s</span></div>
+        
+        <a href="assets/test-14-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-2.png" alt="Screenshot: 02 The kiosk returns to the home screen by itself"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.35s</span></div>
+        
+        <a href="assets/test-14-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-3.png" alt="Screenshot: 03 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.39s</span></div>
+        
+        <a href="assets/test-14-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-4.png" alt="Screenshot: 04 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.10s</span></div>
+        
+        <a href="assets/test-14-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-5.png" alt="Screenshot: 05 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 1 ticket(s), then proceed to the seat map</span><span class="muted">6.07s</span></div>
+        
+        <a href="assets/test-14-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-6.png" alt="Screenshot: 06 Choose General and 1 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose a free seat and proceed (the kiosk reserves it), then leave the kiosk</span><span class="muted">20.09s</span></div>
+        
+        <a href="assets/test-14-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-7.png" alt="Screenshot: 07 Choose a free seat and proceed (the kiosk reserves it), then leave the kiosk"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Abandoned booking: the kiosk returns home by itself</span><span class="muted">59.54s</span></div>
+        
+        <a href="assets/test-14-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-8.png" alt="Screenshot: 08 Abandoned booking: the kiosk returns home by itself"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The held seat D10 was released (content/trans/cancel)</span><span class="muted">0.22s</span></div>
+        
+        <a href="assets/test-14-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-14-snapshot-9.png" alt="Screenshot: 09 The held seat D10 was released (content/trans/cancel)"></a>
+      </li></ol></details>
 </article>
-<article class="test skip" id="test-10">
+<article class="test fail" id="test-15">
+  <header>
+    <span class="pill fail">✗ Failed</span>
+    <h3>KUI-17 Email my tickets after a purchase</h3>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip fail" title="Run local · 2026-09-30 06:12 · Failed">✗</span></span>
+    <span class="muted">230.32s</span>
+  </header>
+  <p class="file">kui-17-email-my-tickets.spec.ts · Kiosk app · 15 steps · 1 failed</p>
+  <ul class="notes"><li><b>paid booking:</b> BOOKING ID WWLZ389 (booking 2003483), KWD 3.500 paid by club card. Not cancelled: kiosk bookings cannot be cancelled online.</li><li><b>email endings:</b> @gmail.com, @outlook.com, @hotmail.com, @yahoo.com, OTHER</li></ul>
+  <details class="err" open><summary>Failure details</summary><pre class="error">Error: history/resend answered &quot;Something went wrong!&quot;, so the kiosk shows &quot;The email could not be sent. Your paper tickets are all you need.&quot;
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: 10001
+Received: 12002</pre></details>
+  <details><summary>Watch test video (part 1 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-15-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details><details><summary>Watch test video (part 2 of 2)</summary><video class="video" controls preload="metadata"><source src="assets/test-15-video-2.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details open><summary>15 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Open NOW SHOWING</span><span class="muted">3.85s</span></div>
+        
+        <a href="assets/test-15-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-1.png" alt="Screenshot: 01 Open NOW SHOWING"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose &quot;The Buckingham Murders - Hindi&quot;</span><span class="muted">3.62s</span></div>
+        
+        <a href="assets/test-15-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-2.png" alt="Screenshot: 02 Choose &quot;The Buckingham Murders - Hindi&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose the 11:25 Standard show</span><span class="muted">3.13s</span></div>
+        
+        <a href="assets/test-15-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-3.png" alt="Screenshot: 03 Choose the 11:25 Standard show"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose General and 1 ticket(s), then proceed to the seat map</span><span class="muted">6.05s</span></div>
+        
+        <a href="assets/test-15-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-4.png" alt="Screenshot: 04 Choose General and 1 ticket(s), then proceed to the seat map"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose a free seat, SKIP food and go to &quot;Preview and Checkout&quot;</span><span class="muted">23.66s</span></div>
+        
+        <a href="assets/test-15-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-5.png" alt="Screenshot: 05 Choose a free seat, SKIP food and go to &quot;Preview and Checkout&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the mobile number and proceed to payment</span><span class="muted">14.92s</span></div>
+        
+        <a href="assets/test-15-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-6.png" alt="Screenshot: 06 Enter the mobile number and proceed to payment"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Choose CLUB CARD</span><span class="muted">9.14s</span></div>
+        
+        <a href="assets/test-15-snapshot-7.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-7.png" alt="Screenshot: 07 Choose CLUB CARD"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Enter the club card number and PAY</span><span class="muted">15.33s</span></div>
+        
+        <a href="assets/test-15-snapshot-8.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-8.png" alt="Screenshot: 08 Enter the club card number and PAY"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)</span><span class="muted">2.17s</span></div>
+        
+        <a href="assets/test-15-snapshot-9.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-9.png" alt="Screenshot: 09 The club card payment is approved and the booking confirmed (clubcard/kiosk/pay, content/trans/tckbooked)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Booking Success!&quot; offers EMAIL MY TICKETS</span><span class="muted">15.85s</span></div>
+        
+        <a href="assets/test-15-snapshot-10.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-10.png" alt="Screenshot: 10 &quot;Booking Success!&quot; offers EMAIL MY TICKETS"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">&quot;Email my tickets&quot;: a box for the name before the @ and the endings to choose from</span><span class="muted">16.55s</span></div>
+        
+        <a href="assets/test-15-snapshot-11.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-11.png" alt="Screenshot: 11 &quot;Email my tickets&quot;: a box for the name before the @ and the endings to choose from"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Type the name before the @ and choose the ending</span><span class="muted">48.65s</span></div>
+        
+        <a href="assets/test-15-snapshot-12.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-12.png" alt="Screenshot: 12 Type the name before the @ and choose the ending"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Send: &quot;Is this correct?&quot; shows the whole address</span><span class="muted">19.80s</span></div>
+        
+        <a href="assets/test-15-snapshot-13.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-13.png" alt="Screenshot: 13 Send: &quot;Is this correct?&quot; shows the whole address"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Confirm: the kiosk asks the server to email the tickets (history/resend)</span><span class="muted">17.32s</span></div>
+        
+        <a href="assets/test-15-snapshot-14.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-15-snapshot-14.png" alt="Screenshot: 14 Confirm: the kiosk asks the server to email the tickets (history/resend)"></a>
+      </li><li class="bad">
+        <div class="step-row"><span class="pill fail">✗</span><span class="step-title">The email is sent: &quot;Your tickets are on their way to your email.&quot;</span><span class="muted">0.00s</span></div>
+        <pre class="error">Error: history/resend answered &quot;Something went wrong!&quot;, so the kiosk shows &quot;The email could not be sent. Your paper tickets are all you need.&quot;
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: 10001
+Received: 12002</pre>
+        
+      </li></ol></details>
+</article>
+<article class="test skip" id="test-16">
   <header>
     <span class="pill skip">– Skipped</span>
     <h3>KUI-21 Printer out of paper: clear message, nothing printed</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip skip" title="Run local · 2026-09-30 06:12 · Skipped">–</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip skip" title="Run local · 2026-09-30 06:12 · Skipped">–</span></span>
     <span class="muted">0.00s</span>
   </header>
   <p class="file">kui-21-printer-not-ready.spec.ts · Kiosk app · 0 steps</p>
@@ -233,18 +837,42 @@ footer { color:var(--muted); font-size:13px; margin-top:24px; }
   
   <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
 </article>
-<article class="test skip" id="test-11">
+<article class="test pass" id="test-17">
   <header>
-    <span class="pill skip">– Skipped</span>
+    <span class="pill pass">✓ Passed</span>
     <h3>KUI-23 API unavailable: friendly messages, no crash, recovers when the API is back</h3>
-    <span class="chips" aria-label="Last 2 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span><span class="chip skip" title="Run local · 2026-09-30 06:47 · Skipped">–</span></span>
-    <span class="muted">0.00s</span>
+    <span class="chips" aria-label="Last 1 runs"><span class="chip pass" title="Run local · 2026-09-30 06:12 · Passed">✓</span></span>
+    <span class="muted">37.19s</span>
   </header>
-  <p class="file">kui-23-api-unavailable.spec.ts · Kiosk app · 0 steps</p>
+  <p class="file">kui-23-api-unavailable.spec.ts · Kiosk app · 6 steps</p>
   
   
-  
-  <details ><summary>0 execution steps with screenshots</summary><ol class="steps"></ol></details>
+  <details><summary>Watch test video</summary><video class="video" controls preload="metadata"><source src="assets/test-17-video.mp4" type="video/mp4">This viewer cannot play the video.</video></details>
+  <details ><summary>6 execution steps with screenshots</summary><ol class="steps"><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">Simulate the API being down (every API call answers HTTP 503)</span><span class="muted">0.21s</span></div>
+        
+        <a href="assets/test-17-snapshot-1.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-17-snapshot-1.png" alt="Screenshot: 01 Simulate the API being down (every API call answers HTTP 503)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">NOW SHOWING: &quot;This is not available right now&quot; with a Try again button</span><span class="muted">4.56s</span></div>
+        
+        <a href="assets/test-17-snapshot-2.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-17-snapshot-2.png" alt="Screenshot: 02 NOW SHOWING: &quot;This is not available right now&quot; with a Try again button"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">The kiosk&#39;s calls really failed with 503 (simulated outage)</span><span class="muted">0.19s</span></div>
+        
+        <a href="assets/test-17-snapshot-3.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-17-snapshot-3.png" alt="Screenshot: 03 The kiosk&#39;s calls really failed with 503 (simulated outage)"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">API back: Try again loads the film list</span><span class="muted">6.27s</span></div>
+        
+        <a href="assets/test-17-snapshot-4.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-17-snapshot-4.png" alt="Screenshot: 04 API back: Try again loads the film list"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">API down again: FOOD shows &quot;Food is not available at this kiosk right now&quot;</span><span class="muted">7.96s</span></div>
+        
+        <a href="assets/test-17-snapshot-5.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-17-snapshot-5.png" alt="Screenshot: 05 API down again: FOOD shows &quot;Food is not available at this kiosk right now&quot;"></a>
+      </li><li class="">
+        <div class="step-row"><span class="pill pass">✓</span><span class="step-title">API back: the kiosk is still running and the home screen works</span><span class="muted">7.42s</span></div>
+        
+        <a href="assets/test-17-snapshot-6.png" target="_blank"><img class="snapshot" loading="lazy" src="assets/test-17-snapshot-6.png" alt="Screenshot: 06 API back: the kiosk is still running and the home screen works"></a>
+      </li></ol></details>
 </article>
 <footer>Generated from Playwright JSON results. Screenshots and test videos are bundled with the dashboard.</footer>
 </main>
