@@ -59,6 +59,12 @@ if (!fs.existsSync(path.join(root, 'test-results', 'results.json'))) {
   console.error('No results.json produced. Aborting publish.');
   process.exit(1);
 }
+// A results file without any test result (e.g. written by `playwright test --list`) must never be published.
+const ranTests = (suite) => (suite.specs || []).some((s) => s.tests.some((t) => t.results.length)) || (suite.suites || []).some(ranTests);
+if (!JSON.parse(fs.readFileSync(path.join(root, 'test-results', 'results.json'), 'utf8')).suites.some(ranTests)) {
+  console.error('test-results/results.json holds no test results (a "playwright test --list" overwrites it). Run the tests again. Aborting publish.');
+  process.exit(1);
+}
 
 // Step 3: build the dashboard (with its screenshots and videos) in reports/.
 step('Building dashboard in reports/');
