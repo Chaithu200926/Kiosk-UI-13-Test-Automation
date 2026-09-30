@@ -1,9 +1,15 @@
-# KIOSK UI Testing: publishes the CinescapeKiosk UI test results.
+# KIOSK UI Testing: runs or publishes the CinescapeKiosk UI tests and shows them on the dashboard.
 #
-# How results get here: `npm run publish-results` runs the tests on the QA PC (the kiosk app and the
-# UAT API are only available there, and UI tests need an unlocked Windows desktop) and pushes the
-# results into reports/. That push starts this workflow, which publishes the dashboard to GitHub
-# Pages, shows the results table on the run page, and turns the run red if any test failed.
+# Two ways in:
+#   * Usual: `npm run publish-results` runs the tests on the QA PC (the kiosk app and the UAT API are only
+#     available there, and UI tests need an unlocked Windows desktop) and pushes the results into reports/.
+#     That push starts this workflow, which publishes the dashboard to GitHub Pages, shows the results table
+#     on the run page, and turns the run red if any test failed.
+#   * Optional: "Run workflow" with "Run the tests on the QA PC's runner" ticked runs the tests from GitHub.
+#     This needs a self-hosted runner with label "kiosk-ui" started with run.cmd in the logged-in, unlocked
+#     desktop session of the QA PC (not as a service: the kiosk opens full screen). Currently blocked: Windows
+#     Code Integrity (Device Guard) on the QA PC does not allow the runner program; IT has to allow it first.
+# There is deliberately no pull_request trigger: the repo is public and the runner is inside the office.
 name: KIOSK UI Testing
 
 on:
@@ -11,8 +17,17 @@ on:
   push:
     branches: [main]
     paths: ['reports/**']
-  # Allow republishing by hand from the Actions tab.
+  # Allow starting it by hand from the Actions tab.
   workflow_dispatch:
+    inputs:
+      run_on_runner:
+        description: Run the tests on the QA PC's runner (label kiosk-ui); otherwise just republish the last results
+        type: boolean
+        default: false
+      include_paying_tests:
+        description: Also run the tests that pay with the test club card (KUI-07/16, 08, 10, 11, 17; about KWD 12)
+        type: boolean
+        default: false
 
 # Permissions needed to publish to GitHub Pages.
 permissions:
@@ -20,14 +35,67 @@ permissions:
   pages: write
   id-token: write
 
-# Never run two publishes at once; queue them instead.
+# Never run two runs at once (there is one kiosk); queue them instead.
 concurrency:
   group: kiosk-ui-testing
   cancel-in-progress: false
 
 jobs:
+  # Job 1 (optional): run the tests on the QA PC through its self-hosted runner.
+  run-tests:
+    name: Run kiosk UI tests on the QA PC
+    if: github.event_name == 'workflow_dispatch' && inputs.run_on_runner
+    runs-on: [self-hosted, windows, kiosk-ui]
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      # Get the code, including the committed run history in reports/.
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      # Install the exact package versions from package-lock.json (Playwright, WebdriverIO, Appium, NovaWindows).
+      - name: Install dependencies
+        run: npm ci
+
+      # The test account, club card and admin PIN are never in the repo: use the QA PC's own .env file
+      # (repository variable KIOSK_UI_ENV_FILE, or the project folder on the QA PC).
+      - name: Use the QA PC's test settings
+        run: Copy-Item -LiteralPath "${{ vars.KIOSK_UI_ENV_FILE || 'C:\softwares\vs code\playwright\CinescapeKiosk-UI-Automation\.env' }}" -Destination .env
+
+      # Run the tests. Failed tests do not stop the job: they are reported on the dashboard.
+      - name: Run the tests (the kiosk opens full screen)
+        continue-on-error: true
+        run: |
+          if ('${{ inputs.include_paying_tests }}' -eq 'true') { npx playwright test }
+          else { npx playwright test --grep-invert "KUI-(07|08|10|11|16|17) " }
+
+      # Build the dashboard in reports/ (as publish-results does); results.json keeps only the stats.
+      - name: Build the dashboard
+        run: |
+          Copy-Item test-results\results.json reports\results.json -Force
+          $env:REPORT_DIR = 'reports'; $env:KIOSK_TRIGGER = 'self-hosted runner on the QA PC'
+          node scripts/generate-dashboard.js
+          node -e "const fs=require('fs');const f='reports/results.json';fs.writeFileSync(f,JSON.stringify({stats:JSON.parse(fs.readFileSync(f,'utf8')).stats},null,2))"
+
+      # Hand the dashboard to the publish job.
+      - name: Upload the dashboard
+        uses: actions/upload-artifact@v4
+        with:
+          name: kiosk-ui-reports
+          path: reports
+
+      # Never leave the .env copy in the runner's work folder.
+      - name: Remove the settings copy
+        if: always()
+        run: Remove-Item .env -ErrorAction SilentlyContinue
+
+  # Job 2: publish the dashboard (the fresh one from job 1, or the committed reports/).
   publish:
     name: Publish dashboard and results
+    needs: run-tests
+    if: always() && needs.run-tests.result != 'failure' && needs.run-tests.result != 'cancelled'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -36,6 +104,14 @@ jobs:
       # Get the committed reports/ folder.
       - name: Check out the code
         uses: actions/checkout@v4
+
+      # When job 1 ran, use its fresh dashboard instead.
+      - name: Use the dashboard from the QA PC run
+        if: needs.run-tests.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: kiosk-ui-reports
+          path: reports
 
       # Put the results table on this run page.
       - name: Show test results on this run

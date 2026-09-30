@@ -79,6 +79,16 @@ The kiosk app and the UAT API are only reachable from the QA PC, so tests run th
 (summary tiles, trend, and every test's steps with screenshots and video) to GitHub Pages and turns red when a
 test failed. The Playwright HTML report is kept local only.
 
+Dashboard: <https://chaithu200926.github.io/Kiosk-UI-13-Test-Automation/>
+
+**Running the tests from GitHub (not available yet).** The workflow can also run the tests itself: Actions →
+KIOSK UI Testing → Run workflow → tick "Run the tests on the QA PC's runner" (and, if wanted, the paying tests).
+That needs a self-hosted runner on the QA PC with the label `kiosk-ui`, started with `run.cmd` in the logged-in,
+unlocked desktop session (not as a Windows service, because the kiosk opens full screen). It uses the QA PC's own
+`.env` (repository variable `KIOSK_UI_ENV_FILE`, default: this project folder). Today Windows Code Integrity
+(Device Guard) on the QA PC blocks `C:\actions-runner\bin\Runner.Listener.exe` ("did not meet the Enterprise
+signing level"), so IT has to allow the runner first.
+
 ## How it works
 
 | File | Purpose |
