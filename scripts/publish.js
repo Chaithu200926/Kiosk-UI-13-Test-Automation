@@ -79,7 +79,9 @@ const s = results.stats || {};
 const total = (s.expected || 0) + (s.unexpected || 0) + (s.skipped || 0) + (s.flaky || 0);
 const summary = `${s.expected || 0}/${total} passed${s.unexpected ? `, ${s.unexpected} failed` : ''}`;
 sh('git add reports');
-commit(`Test results: ${summary}` + trailer);
+// Publishing the same run again can leave the dashboard unchanged: then there is nothing new to commit.
+if (sh('git diff --cached --name-only')) commit(`Test results: ${summary}` + trailer);
+else console.log('  dashboard unchanged, nothing new to commit');
 // Without a GitHub remote yet, keep the commits local; the first push publishes them.
 let remote = '';
 try {
