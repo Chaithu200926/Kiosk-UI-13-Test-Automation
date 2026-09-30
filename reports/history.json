@@ -1,0 +1,31 @@
+[
+  {
+    "run": "local",
+    "at": "2026-09-30T06:12:58.515Z",
+    "commit": "abf4569",
+    "url": "",
+    "total": 17,
+    "passed": 15,
+    "failed": 1,
+    "skipped": 1,
+    "tests": {
+      "KUI-01 App start: the home screen loads with all menu buttons": "passed",
+      "KUI-02 Language switch: Arabic translates and mirrors the screens, HOME returns to English": "passed",
+      "KUI-03 Films and show times match today's programme": "passed",
+      "KUI-04 Coming soon: films show opening dates and details, not on sale yet": "passed",
+      "KUI-05 Seat type and ticket quantity: total = price x quantity": "passed",
+      "KUI-06 Seat selection: unavailable seats are blocked and Proceed needs every seat": "passed",
+      "KUI-07 Ticket purchase end to end, paid by club card": "passed",
+      "KUI-16 Pickup tickets by BOOKING ID; a second pickup is refused": "passed",
+      "KUI-08 Food purchase end to end, paid by club card": "passed",
+      "KUI-09 Food combo options carry through to checkout": "passed",
+      "KUI-10 Tickets and food in one order, paid once by club card": "passed",
+      "KUI-11 Club card (wallet) payment deducts the balance": "passed",
+      "KUI-14 Cancel during booking releases the reserved seats": "passed",
+      "KUI-15 Idle timeout: the kiosk returns home and releases held seats": "passed",
+      "KUI-17 Email my tickets after a purchase": "failed",
+      "KUI-21 Printer out of paper: clear message, nothing printed": "skipped",
+      "KUI-23 API unavailable: friendly messages, no crash, recovers when the API is back": "passed"
+    }
+  }
+]
